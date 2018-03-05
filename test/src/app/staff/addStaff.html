@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Staff Information</h3>
+    <button type="button" class="close" datadismiss="modal" aria-hidden="true" ng-click="miModalCancel()">&times;</button>
+</div>
+<div class="modal-body" id="modal-body">
+        
+  <div class="add-content">
+    <div class="form-group">
+ <label>name</label>
+ <input type="text" class="form-control" ng-model="input1">
+</div>
+<div class="form-group">
+ <label>Profile</label>
+ <input type="text" class="form-control" ng-model="input2">
+</div>
+<div class="form-group">
+    <label>Phone Number</label>
+    <input type="number" class="form-control" ng-model="input3">
+   </div>
+
+ <div class="select">
+      <label>select city</label>
+ <select ng-model="select" ng-init="select = data[0].city">
+   <option  ng-repeat="option in data" value="{{option.city}}">{{option.city}}</option>
+ </select>
+ </div>
+
+  <button class="btn btn-primary" ng-click="add(input1,input2,select,input3,'add')"> add</button>
+  <!-- <button class="reset btn-warning" ng-click="reset()">Reset</button> -->
+</div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="add(input1,input2,select,input3,'ok')">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="miModalCancel()">Cancel</button>
+</div>

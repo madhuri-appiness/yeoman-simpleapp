@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="staff-holder padding">
+    <h1>Maintenance</h1>
+    <div class="staff-content">
+      <div class="staff-buttons pull-right">
+        <button class="btn-success btn-lg" ng-click="candidateForm()">Add</button>
+        <button class="btn-warning btn-lg">Download</button>
+        <button class="btn-danger btn-lg">Upload</button>
+      </div>
+      <section>
+       
+          
+            <table class="table table-bordered">
+                   <tr>
+                       <th>Name</th>
+                       <th>Profile</th>
+                      
+                       <th>City</th>
+                       <th>Phone Number</th>
+                   </tr>
+                  <tr ng-repeat="val in addStaff.staff">
+                       <td>{{val.name}}</td>
+                       <td>{{val.profile}}</td>
+                      
+                       <td>{{val.city}}</td> 
+                       <td>{{val.phone}}</td>              
+                  </tr>
+            </table>
+         
+   
+          
+       
+               
+       </section>
+    </div>
+   
+  </div>
+</div>
